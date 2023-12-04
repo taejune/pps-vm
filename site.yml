@@ -1,0 +1,4 @@
+- name: Configure rsyslogd
+  hosts: redhat
+  roles:
+  - role: rsyslog_setup

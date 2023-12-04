@@ -1,0 +1,17 @@
+
+
+- name: Declare values files
+  set_fact:
+    rsyslog_conf: ["zcp.conf", "debug.conf"]
+
+- name: Generate configuration files
+  template:
+    src: "{{ item }}.j2"
+    dest: "/etc/rsyslog.d/{{ item }}"
+  with_items: "{{ rsyslog_conf }}"
+  register: rsyslog_conf_result
+
+- name: Reload service rsyslog
+  ansible.builtin.systemd_service:
+    name: rsyslog.service
+    state: restarted

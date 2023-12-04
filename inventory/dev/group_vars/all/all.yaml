@@ -1,0 +1,2 @@
+zcp_haproxy_syslog_host: zcp-onprem-cp-eks-rcv-nlb-3b054e836438c393.elb.ap-northeast-2.amazonaws.com
+zcp_haproxy_syslog_port: 30514
