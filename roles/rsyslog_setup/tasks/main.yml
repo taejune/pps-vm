@@ -1,5 +1,3 @@
-
-
 - name: Declare values files
   set_fact:
     rsyslog_conf: ["zcp.conf", "debug.conf"]
